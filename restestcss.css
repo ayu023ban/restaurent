@@ -47,7 +47,7 @@ table {
           box-sizing: border-box; }
 body{
     transition: 0.5s;
-    background: url(restaurant.jpg) no-repeat fixed; 
+    background: url(mainpageimages/restaurant.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -61,7 +61,7 @@ body{
   }
   body.hover-eat {
     transition: 0.5s;
-    background: url(eat.jpg) no-repeat fixed; 
+    background: url(mainpageimages/eat.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -75,7 +75,7 @@ body{
   
   body.hover-drink {
     transition: 0.5s;
-    background: url(drink.jpg) no-repeat fixed; 
+    background: url(mainpageimages/drink.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -87,7 +87,7 @@ body{
   
   body.hover-visit {
     transition: 0.5s;
-    background: url(visit.jpg) no-repeat fixed; 
+    background: url(mainpageimages/visit.jpg) no-repeat fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
