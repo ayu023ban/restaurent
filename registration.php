@@ -1,5 +1,5 @@
-<?php require('connection.php');
- ?>
+
+ <?php include('process.php'); ?>
  <html lang="en">
 
  <head>
@@ -16,6 +16,7 @@
  </head>
 
  <body class="" style="background: white none repeat scroll 0% 0%; color: black;">
+    <div id="php"></div>
      <div id="content">
 
          <div class="header">
@@ -32,42 +33,25 @@
          </div>
          <div class="mainbody">
            <div class="container">
-
-             <?php
-               if (isset($_POST['create'])) {
-                 $firstname=$_POST['firstname'];
-                 $lastname=$_POST['lastname'];
-                 $email=$_POST['email'];
-                 $mobile=$_POST['mobile'];
-                 $password=$_POST['password'];
-                 $sql= "INSERT INTO users (firstname, lastname, email, phonenumber, password) VALUES( '{$firstname}' , '{$lastname}' , '{$email}' , '{$mobile}' , '{$password}' );";
-
-                 if ($conn->query($sql) === TRUE){
-                   echo "New record created successfully";
-                 } else {
-                   echo "Error: " . $sql . "<br>" . $db->error;
-                 }
-
-               }
-
-              ?>
+            
+             
      				<h1>Registration form</h1>
 
             <form action="registration.php" method="post">
      				<label for="firstname"><b>First Name</b></label>
-     				<input class="form-control" type="text" name="firstname" required><br>
+     				<input class="form-control" id="firstname" type="text" name="firstname" required><br>
 
      				<label for="lastname"><b>last Name</b></label>
-     				<input class="form-control" type="text" name="lastname" required><br>
+     				<input class="form-control" id="lastname" type="text"  name="lastname" required><br>
 
      				<label for="email"><b>Email Address</b></label>
-     				<input class="form-control" type="email" name="email" required><br>
+     				<input class="form-control" id="email" type="email" name="email"  required><span><?php if($error_email != ""){echo $error_email;} ?></span><br>
 
-     				<label for="mobile"><b>Mobile Number</b></label>
-     				<input class="form-control" type="text" name="mobile" required><br>
+     				<label for="phonenumber"><b>Mobile Number</b></label>
+     				<input class="form-control" id="phonenumber" type="number" name="phonenumber" required><br>
 
      				<label for="password"><b>Password</b></label>
-     				<input class="form-control" type="password" name="password" required><br>
+     				<input class="form-control" id="password" type="password" name="password" required><?php if($error_password != ""){echo $error_password;} ?><br>
 
      				<input class="table-button" id="register" type="submit" name="create" value="Sign Up">
           </form>
@@ -80,49 +64,6 @@
              </div>
          </div>
        </div>
-       <script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
-            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-            <script type="text/javascript">
-	$(function(){
-		$('#register').click(function(e){
-			var valid = this.form.checkValidity();
-			if(valid){
-			var firstname 	= $('#firstname').val();
-			var lastname	= $('#lastname').val();
-			var email 		= $('#email').val();
-			var phonenumber = $('#phonenumber').val();
-			var password 	= $('#password').val();
-
-				e.preventDefault();
-				$.ajax({
-					type: 'POST',
-					url: 'process.php',
-					data: {firstname: firstname,lastname: lastname,email: email,phonenumber: phonenumber,password: password},
-					success: function(data){
-					Swal.fire({
-								'title': 'Successful',
-								'text': data,
-								'type': 'success'
-								})
-
-					},
-					error: function(data){
-						Swal.fire({
-								'title': 'Errors',
-								'text': 'There were errors while saving the data.',
-								'type': 'error'
-								})
-					}
-				});
-
-			}else{
-
-			}
-
-		});
-
-	});
-
-</script>
+       
    </body>
 </html>

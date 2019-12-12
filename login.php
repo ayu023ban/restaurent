@@ -1,5 +1,5 @@
-<?php include(connection.php);
- ?>
+
+ <?php require('process.php');?>
  <html lang="en">
 
  <head>
@@ -16,6 +16,7 @@
  </head>
 
  <body class="" style="background: white none repeat scroll 0% 0%; color: black;">
+    
      <div id="content">
 
          <div class="header">
@@ -38,17 +39,17 @@
 
 
 
-
+            <form method="post" action="login.php">
      				<label for="email"><b>Email Address</b></label>
-     				<input class="form-control" type="email" name="email" required><br>
+     				<input class="form-control" type="email" name="email" required><?php if($error_email_login != ""){echo $error_email_login;} ?><br>
 
 
 
      				<label for="password"><b>Password</b></label>
-     				<input class="form-control" type="password" name="password" required><br>
+     				<input class="form-control" type="password" name="password" required><?php if($error_email_password != ""){echo $error_email_password;} ?><br>
 
-     				<input class="table-button" type="submit" name="create" value="Log in">
-
+     				<input class="table-button" type="submit" name="login" value="Log in"><?php if($error_button != ""){echo $error_button;} ?>
+          </form>
      			</div>
              <hr class="thin"><a href="restest.html" class="title-footer"> —A Y U S H 'S— </a>
              <div class="social-div">
