@@ -1,11 +1,16 @@
+<?php require('orderprocess.php');
+ if(!isset($_SESSION['email'])){
+	header('location: login.php');
+}
+?>
 <html lang="en">
-<?php include('process.php'); ?>
+
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="ordercss.css">
+    <link rel="stylesheet" href="drinkscss.css">
     <link href="font.css" rel="stylesheet">
-     <script src="fontawesome.js"></script>
-     <link rel="stylesheet" href="css1.css" media="all">
+    <script src="fontawesome.js"></script>
+    <link rel="stylesheet" href="css1.css" media="all">
     <link rel="stylesheet" href="css1.css" media="all">
     <link rel="stylesheet" href="css3.css" media="all">
 
@@ -35,30 +40,7 @@
             </div>
         </div>
         <div class="mainbody">
-            <h1>— ENTRÉES —</h1><em>Starters and Maincourse</em>
-            <div>
-                    <img class="dessert-img" src="orderpageimages/hors1.jpg">
-                <p> — Hors d'oeuvres — <br>Goat cheese crostini with fig-olive tapenade<br>$22</p><br>
-                <img class="dessert-img" src="orderpageimages/Amuse2.jpg">
-                <p> — Amuse-bouche — <br>Sweet potato chips with goat cheese and caviar<br>$24</p><br>
-                <img class="dessert-img" src="orderpageimages/3.jpg">
-                <p> — Bouillabaisse — <br>dolor sit amet, consectetur<br>$27</p><br>
-                <img class="dessert-img" src="orderpageimages/Feijoada3.jpg">
-                <p> — Feijoada  — <br> ut labore, et dolore <br>$11</p><br>
-                <hr>
-            </div>
-            <div><img class="dessert-img" src="orderpageimages/dessert.jpg">
-                <h1>— DESSERT —</h1><em>Culpa qui officia deserunt mollit </em><br>
-                <img class="dessert-img" src="orderpageimages/desertleche1.jpg">
-                <p> — Leche Asada — <br>lBaked Custard with Caramel Sauce<br>$12</p><br>
-                <img class="dessert-img" src="orderpageimages/lemon4.jpg">
-                <p> — Lemon Meringue Pie — <br>limoncello blueberry coulis, candied lemon<br>$12</p><br>
-                <img class="dessert-img" src="orderpageimages/brig3.jpg">
-                <p> — Brigadeiros — <br>Brazillian Fudge Balls <br>$9</p><br>
-                <img class="dessert-img" src="orderpageimages/edit.jpg">
-                <p> — Buñuelos — <br>fried dough balls with different kinds of fillings <br>$8</p>
-            </div>
-            <div class="res-button"><a href="table.php">MAKE A RESERVATION</div>
+            
             <hr class="thin"><a href="restest.php" class="title-footer"> —A Y U S H 'S— </a>
             <div class="social-div">
                     <a href="https://twitter.com/ayushbansal023" ><i id="twitter"  class="fab fa-twitter social-nav" aria-hidden="true"></i></a>

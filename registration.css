@@ -207,7 +207,7 @@ table {
         font-size: 14px;
         line-height: 24px;
       }
-      #insta ,#facebook,#twitter{
+      #logput,#insta ,#facebook,#twitter{
         text-decoration: none;
         color:black;
       }
@@ -224,3 +224,28 @@ table {
 label{
 	float: left;
 }
+#login{
+  right: 20px;
+}
+#signup{
+  bottom: 30px;
+  left: 20px;
+  padding-bottom:  12px;
+}
+.logout{
+   
+        text-decoration: none;
+        color:black;
+        border-width: 0;
+        background-color: white;
+        float: right;
+      margin:0;
+      right: 1px;
+    font-size : 13px;
+}
+.logout:hover{
+    
+    cursor:pointer;
+  }
+
+ 

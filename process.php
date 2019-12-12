@@ -23,8 +23,58 @@ $error_email="";
 $error_password="";
 $error_password_login="";
 $error_email_login="";
+  
+  // for signup page
+if(isset($_SESSION['email'])){
+    $a3="<a class=\"hover-color right-nav gallery\">welcome ".$_SESSION['email']."</a>";
+    $a4="<form action=\"process.php\" method=\"get\" >
+          <button type=\"submit\" class=\"logout\" name=\"logout\">
+    <i id=\"logout\" class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>
+</button>
+          </form> ";
+                  
+          
+  }
+  else{
+    $a3="<a href=\"login.php\"  class=\"hover-color right-nav gallery\">Login</a>";
+    $a4="";
+   
+  }
+
+// for login page
+  if(isset($_SESSION['email'])){
+    $a5="<a class=\"hover-color right-nav gallery\">welcome ".$_SESSION['email']."</a>";
+    $a6="<form action=\"process.php\" method=\"get\" >
+          <button type=\"submit\" class=\"logout\" name=\"logout\">
+    <i id=\"logout\" class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>
+</button>
+          </form> ";
+                  
+          
+  }
+  else{
+    $a5="";
+    $a6="<a href=\"registration.php\"   class=\"hover-color right-nav gallery\">Sign Up</a>";
+   
+  }
 
 
+// for other pages
+  if(isset($_SESSION['email'])){
+    $a1="<a class=\"hover-color right-nav gallery\">welcome ".$_SESSION['email']."</a>";
+    $a2="<form action=\"process.php\" method=\"get\" >
+          <button type=\"submit\" class=\"logout\" name=\"logout\">
+    <i id=\"logout\" class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>
+</button>
+          </form> ";
+                  
+          
+  }
+  else{
+    $a1="<a href=\"login.php\"  class=\"hover-color right-nav gallery\">Login</a>";
+    $a2="<a href=\"registration.php\"   class=\"hover-color right-nav gallery\">Sign Up</a>";
+   
+  }
 
 
 // process of registration
@@ -101,7 +151,7 @@ if(isset($_POST['create'])){
     $result_login= $conn->query($data);
       if($result_login->num_rows>0){
         $_SESSION['email']=$email;
-        header('location: restest.html');
+        header('location: table.php');
       }
       else{
         $error_button="Your email or password is incorrect";
@@ -121,4 +171,4 @@ if(isset($_POST['create'])){
 
    
 
-  ?>
+

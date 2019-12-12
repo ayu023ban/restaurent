@@ -1,13 +1,13 @@
 <html lang="en">
-
+<?php include('process.php'); ?>
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="drinkscss.css">
-    <link href="https://fonts.googleapis.com/css?family=Libre+Caslon+Text:400&amp;display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/e24ca22cc7.js"></script>
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free.min.css" media="all">
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-font-face.min.css" media="all">
-    <link rel="stylesheet" href="https://kit-free.fontawesome.com/releases/latest/css/free-v4-shims.min.css" media="all">
+    <link href="font.css" rel="stylesheet">
+     <script src="fontawesome.js"></script>
+     <link rel="stylesheet" href="css1.css" media="all">
+    <link rel="stylesheet" href="css1.css" media="all">
+    <link rel="stylesheet" href="css3.css" media="all">
 
     <title>AYUSH's</title>
 
@@ -17,15 +17,21 @@
     <div id="content">
 
         <div class="header">
-            <div class="left"><a href="restest.html" class="title">A Y U S H 'S</a></div>
+            <div class="left"><a href="restest.php" class="title">A Y U S H 'S</a></div>
             <div class="right">
-                <a class="hover-color right-nav order">Order Now</a>
-                <a href="restest.html" class="hover-color right-nav home">Home</a>
-                <a href="gallary.html" class="hover-color right-nav gallery">Gallery</a>
-                <a href="visit.html" class="hover-color right-nav visit">Visit</a>
+                <?php 
+                      echo $a1;  
+                  ?>
+                <a href="order.php" class="hover-color right-nav order">Order Now</a>
+                <a href="restest.php" class="hover-color right-nav home">Home</a>
+                <a href="gallary.php" class="hover-color right-nav gallery">Gallery</a>
+                <a href="visit.php" class="hover-color right-nav visit">Visit</a>
                 <a href="https://twitter.com/ayushbansal023" ><i id="twitter"  class="fab fa-twitter social-nav" aria-hidden="true"></i></a>
                <a href="https://www.facebook.com/ayushbansal23"> <i id="facebook" class="fab fa-facebook social-nav" aria-hidden="true"></i></a>
                <a href="https://www.instagram.com/ayu023ban/"> <i id="insta" class="fab fa-instagram social-nav" aria-hidden="true"></i></a>
+               <?php 
+                      echo $a2;  
+                  ?>
             </div>
         </div>
         <div class="mainbody">
@@ -52,8 +58,8 @@
                 <img class="dessert-img" src="drinks/drinkingcampari.jpg">
                 <p> — Campari — <br>Italian aperitif, with a bright red colour and unique flavour <br>$8</p>
             </div>
-            <div class="res-button">MAKE A RESERVATION</div>
-            <hr class="thin"><a href="restest.html" class="title-footer"> —A Y U S H 'S— </a>
+            <div class="res-button"><a href="table.php">MAKE A RESERVATION</a></div>
+            <hr class="thin"><a href="restest.php" class="title-footer"> —A Y U S H 'S— </a>
             <div class="social-div">
                     <a href="https://twitter.com/ayushbansal023" ><i id="twitter"  class="fab fa-twitter social-nav" aria-hidden="true"></i></a>
                     <a href="https://www.facebook.com/ayushbansal23"> <i id="facebook" class="fab fa-facebook social-nav" aria-hidden="true"></i></a>
@@ -61,7 +67,7 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript" src="main.js"></script>
+    
 
 </body>
 

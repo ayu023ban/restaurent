@@ -1,0 +1,32 @@
+if(isset($_SESSION['email'])){
+    $a1="Welcome $_SESSION['email']";
+    $a2="<form action=\"process.php\" method=\"get\" >
+          <input class=\"hover-color right-nav gallery\" type=\"submit\" name=\"logout\" value=\"Log out\">
+          </form> ";              
+          
+  }
+  else{
+    $a1="<a href=\"login.php\"  class=\"hover-color right-nav gallery\">Login</a>";
+    $a2="<a href=\"registration.php\"   class=\"hover-color right-nav gallery\">Sign Up</a>";
+  }
+
+
+
+
+
+  if(isset($_SESSION['email'])){
+    header('location: table.php');
+}
+
+$a2="<form action=\"process.php\" method=\"get\" >
+          <input class=\"hover-color right-nav gallery\" type=\"submit\" name=\"logout\" value=\"Log out\">
+          </form> ";
+
+
+<button type=\"submit" class=\"btn btn-success\">
+    <i class="fa fa-sign-out" aria-hidden="true"></i> Next
+</button>
+
+
+
+"<p class=\"hover-color right-nav gallery\">welcome ".$_SESSION['email']."</p>";

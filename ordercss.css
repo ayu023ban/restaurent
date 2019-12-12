@@ -191,3 +191,18 @@ table {
         text-decoration: none;
         color:black;
       }
+      .logout{
+   
+        text-decoration: none;
+        color:black;
+        border-width: 0;
+        background-color: white;
+        float: right;
+      margin:0;
+      right: 1px;
+    font-size : 13px;
+}
+.logout:hover{
+    
+    cursor:pointer;
+  }

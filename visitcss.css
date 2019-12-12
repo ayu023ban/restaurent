@@ -187,7 +187,7 @@ a{
         cursor:pointer;
         
       }
-      .res-button, .eat-button{
+      .res-button{
         text-align:center;
         letter-spacing: 2.5px;
         margin: auto;
@@ -242,3 +242,21 @@ a{
         margin-top: 100px;
         cursor: pointer;
       }
+      #table_button{
+        color:white;
+      }
+      .logout{
+   
+        text-decoration: none;
+        color:black;
+        border-width: 0;
+        background-color: white;
+        float: right;
+      margin:0;
+      right: 1px;
+    font-size : 13px;
+}
+.logout:hover{
+    
+    cursor:pointer;
+  }

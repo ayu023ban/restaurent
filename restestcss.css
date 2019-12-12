@@ -306,3 +306,18 @@ body{
     text-decoration: none;
     color:white;
   }
+  .logout{
+        margin-top: 20px;
+        text-decoration: none;
+        color:white;
+        border-width: 0;
+        background-color: inherit;
+        float: right;
+      margin:0;
+      right: 1px;
+    font-size : 13px;
+}
+.logout:hover{
+    
+    cursor:pointer;
+  }
