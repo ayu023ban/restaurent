@@ -260,3 +260,55 @@ a{
     
     cursor:pointer;
   }
+  img{
+    width: 100%;
+    height: auto;   
+  }
+  .container {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+   
+  .imgtitle {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    color: white;
+     font-size: 3em;
+     cursor: pointer;
+     font:inherit;
+    text-decoration: none;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity .5s;
+    
+  }
+  .image {
+    line-height: 0;
+          
+
+  }
+  
+  .container:hover .imgtitle:hover {
+    opacity: 1;
+    font-size: 3em;
+    cursor: pointer;
+  }
+  .image img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+    transform: scale(1.1);
+  }
+   
+  .container:hover .image img {
+    filter: blur(3px);
+  }
+  #table_button{
+    color:white;
+  }

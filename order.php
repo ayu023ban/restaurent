@@ -2,7 +2,7 @@
 <?php include('process.php'); ?>
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="ordercss.css">
+    <link rel="stylesheet" href="visitcss.css">
     <link href="font.css" rel="stylesheet">
      <script src="fontawesome.js"></script>
      <link rel="stylesheet" href="css1.css" media="all">

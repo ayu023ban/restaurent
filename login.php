@@ -56,7 +56,7 @@
 
 
      				<label for="password"><b>Password</b></label>
-     				<input class="form-control" type="password" name="password" required><?php if($error_email_password != ""){echo $error_email_password;} ?><br>
+     				<input class="form-control" type="password" name="password" required><?php if($error_password_login != ""){echo $error_password_login;} ?><br>
                     <div id="floatleft">
      				<input id="login" class="table-button" type="submit" name="login" value="Log in"><?php if($error_button != ""){echo $error_button;} ?>
                     <a href="registration.php" id="signup"  class="table-button">Want To Sign Up?</a>

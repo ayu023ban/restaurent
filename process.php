@@ -23,6 +23,7 @@ $error_email="";
 $error_password="";
 $error_password_login="";
 $error_email_login="";
+$error_button="";
   
   // for signup page
 if(isset($_SESSION['email'])){

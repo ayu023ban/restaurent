@@ -36,9 +36,9 @@
         </div>
         <div class="mainbody">
             <p class="adress">001 Some Street — London, UK — 079 7897 0336</p>
-            <a href="order.html" class="mid-nav eat-mid">EAT</a>
-            <a href="drinks.html" class="mid-nav drink-mid">DRINK</a>
-            <a href="visit.html" class="mid-nav visit-mid">VISIT</a>
+            <a href="order.php" class="mid-nav eat-mid">EAT</a>
+            <a href="drinks.php" class="mid-nav drink-mid">DRINK</a>
+            <a href="visit.php" class="mid-nav visit-mid">VISIT</a>
         </div>
         <script type="text/javascript" src="java.js">
         </script>
