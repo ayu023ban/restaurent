@@ -3,12 +3,12 @@
 	header('location: login.php');
 }
 ?>
-
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style.css">
+    
     <link rel="stylesheet" href="visitcss.css">
     <link href="font.css" rel="stylesheet">
     <script src="fontawesome.js"></script>
@@ -55,7 +55,7 @@ if(isset($_SESSION["cart_item"])){
 <tbody>
 <tr>
 <th style="text-align:left;">Name</th>
-<th style="text-align:left;">Code</th>
+<th style="text-align:left;">    </th>
 <th style="text-align:right;" width="5%">Quantity</th>
 <th style="text-align:right;" width="10%">Unit Price</th>
 <th style="text-align:right;" width="10%">Price</th>
@@ -65,8 +65,8 @@ if(isset($_SESSION["cart_item"])){
     foreach ($_SESSION["cart_item"] as$key=> $item){
         $item_price = $item["quantity"]*$item["price"];
 		?>
-				<tr style="line-height: 30px;height: 40px;font-weight: 900;font-size: larger;">
-				<td><img style="width: 63px;height: auto;border-radius: 15px;" src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
+				<tr>
+				<td><img src="<?php echo $item["image"]; ?>" class="cart-item-image" /><?php echo $item["name"]; ?></td>
 				<td><?php echo $item["code"]; ?></td>
 				<td style="text-align:right;"><?php echo $item["quantity"]; ?></td>
 				<td  style="text-align:right;"><?php echo " ".$item["price"]; ?></td>
@@ -86,11 +86,11 @@ if(isset($_SESSION["cart_item"])){
 </tr>
 </tbody>
 </table>
-<form style="margin-top: 40px;" method='post' action="table.php">
-<label for="members"><b>How many Will come?</b></label>
-    <input class="members" type="number" name="members" value="1" required><br>
-  <div style="display: block ruby;">  <label for="time"><b>When will you come?</b></label><br>
-    <input id="time" type="datetime-local" name="time" required><br></div>
+<form method='post' action="table.php">
+<label for="members"><b>How many Will come?</b></label><br>
+    <input type="number" name="members" required><br>
+    <label for="time"><b>When will you come?</b></label><br>
+    <input type="datetime-local" name="time" required><br>
     <input  class="table-button" type="submit" name="order" value="ODER YOUR FOOD">
   <?php
 } else {
@@ -113,26 +113,26 @@ if(isset($_SESSION["cart_item"])){
 	?>
 		<div class="product-item">
            
-			<form method="post" action="table.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
-			<img class="dessert-img" src="<?php echo $product_array[$key]["image"]; ?>">
-			<div class="product-title-footer">
-		<div class="left-product">	<?php echo $product_array[$key]["name"]; ?>
-			<?php echo "$".$product_array[$key]["price"]; ?></div>
-			<div style="bottom: 21px;" >
-                <label for "quantity">Quantity :</label>
-                <input type="number" class="product-quantity" name="quantity" value="1" size="2" />
-                <input type="submit" value="Add to Cart" class="btnAddAction" /></div>
-			</div>
-
-			</form>
-
+			
+		  <a><img class="mango" src="<?php echo $product_array[$key]["image"]; ?>"></a>
+			
 		</div>
-        <hr class="thin">
+        <div class="product-title-footer">
+        <div class="left-product"><p>   <?php echo $product_array[$key]["name"]; ?>
+            <?php echo "$".$product_array[$key]["price"]; ?></p></div>
+            <div style="position: relative;bottom: 21px;" >
+                <form method="post" action="table.php?action=add&code=<?php echo $product_array[$key]["code"]; ?>">
+                <input type="text" class="product-quantity" name="quantity" value="1" size="2" />
+                <input type="submit" value="Add to Cart" class="btnAddAction" /></div>
+                <hr>
+            </div>
+            </form>
+
 	<?php
 		}
 	}
 	?>
-            <a href="restest.php" class="title-footer"> —A Y U S H 'S— </a>
+            <hr class="thin"><a href="restest.php" class="title-footer"> —A Y U S H 'S— </a>
             <div class="social-div">
                     <a href="https://twitter.com/ayushbansal023" ><i id="twitter"  class="fab fa-twitter social-nav" aria-hidden="true"></i></a>
                     <a href="https://www.facebook.com/ayushbansal23"> <i id="facebook" class="fab fa-facebook social-nav" aria-hidden="true"></i></a>
@@ -141,12 +141,7 @@ if(isset($_SESSION["cart_item"])){
         </div>
     </div>
     
-<script type="text/javascript">
-    let today = new Date().toISOString().substr(0, 16);
-document.querySelector("#time").value = today;
 
-  
-</script>
 </body>
 
 </html>
