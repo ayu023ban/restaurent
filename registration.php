@@ -29,9 +29,9 @@
                 <?php 
                       echo $a3;  
                   ?>
-                 <a class="hover-color right-nav order">Order Now</a>
+                 <a href="order.php" class="hover-color right-nav order">Order Now</a>
                  <a href="restest.php" class="hover-color right-nav home">Home</a>
-                 <a class="hover-color right-nav gallery">Gallery</a>
+                 <a href="gallary.php" class="hover-color right-nav gallery">Gallery</a>
                  <a href="visit.php" class="hover-color right-nav visit">Visit</a>
                  <a href="https://twitter.com/ayushbansal023" ><i id="twitter"  class="fab fa-twitter social-nav" aria-hidden="true"></i></a>
                 <a href="https://www.facebook.com/ayushbansal23"> <i id="facebook" class="fab fa-facebook social-nav" aria-hidden="true"></i></a>

@@ -29,7 +29,7 @@
                 <?php 
                       echo $a5;  
                   ?>
-                 <a class="hover-color right-nav order">Order Now</a>
+                 <a href="order.php" class="hover-color right-nav order">Order Now</a>
                  <a href="restest.php" class="hover-color right-nav home">Home</a>
                  <a href="gallary.php" class="hover-color right-nav gallery">Gallery</a>
                  <a href="visit.php" class="hover-color right-nav visit">Visit</a>
