@@ -6,19 +6,19 @@
 $conn = new mysqli("localhost",$db_user,$db_pass,$db_name);
 if($conn->connect_error){
 	die("Connection failed :".$conn->connect_error);
-} 
+}
 session_start();
 
 
     $a1="<a class=\"hover-color right-nav gallery\">welcome ".$_SESSION['email']."</a>";
     $a2="<form action=\"process.php\" method=\"get\" >
           <button type=\"submit\" class=\"logout\" name=\"logout\">
-    <i id=\"logout\" class=\"fa fa-sign-out\" aria-hidden=\"true\"></i>
+					<img class=\"right-nav social_link\" id=\"img\" src=\"mainpageimages/logout-black.png\">
 </button>
           </form> ";
-                  
-          
-  
+
+
+
 
 
 
@@ -30,12 +30,12 @@ switch($_GET["action"]) {
       $result1 = $conn->query("SELECT * FROM products WHERE code='" . $_GET["code"] . "'");
     while($row = $result1->fetch_assoc()) {
         $productByCode[]=$row;
-       
+
     }
-			
-    $itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"],'id'=>$productByCode[0]["id"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));      
-			
-			
+
+    $itemArray = array($productByCode[0]["code"]=>array('name'=>$productByCode[0]["name"],'id'=>$productByCode[0]["id"], 'code'=>$productByCode[0]["code"], 'quantity'=>$_POST["quantity"], 'price'=>$productByCode[0]["price"], 'image'=>$productByCode[0]["image"]));
+
+
 			if(!empty($_SESSION["cart_item"])) {
 				if(in_array($productByCode[0]["code"],array_keys($_SESSION["cart_item"]),false)) {
 					foreach($_SESSION["cart_item"] as $k => $v) {
@@ -58,7 +58,7 @@ switch($_GET["action"]) {
 		if(!empty($_SESSION["cart_item"])) {
 			foreach($_SESSION["cart_item"] as $k => $v) {
 					if($_GET["code"] == $k)
-						unset($_SESSION["cart_item"][$k]);				
+						unset($_SESSION["cart_item"][$k]);
 					if(empty($_SESSION["cart_item"]))
 						unset($_SESSION["cart_item"]);
 			}
@@ -66,7 +66,7 @@ switch($_GET["action"]) {
 	break;
 	case "empty":
 		unset($_SESSION["cart_item"]);
-	break;	
+	break;
 }
 }
 
@@ -93,13 +93,13 @@ if(isset($_POST["order"])){
         else{
           $ordersummary["$i"]=0;
         }
-     
-  }
-  
-  }
-   
 
-  $sql="INSERT INTO `orderSummary` ( `userid`, `noOfMembers`, `timeOfComming`, `Hors d'oeuvres`, `Amuse-bouche`, `Bouillabaisse`, `Feijoada`, `Leche Asada`, `Lemon Meringue Pie`, `Brigadeiros`, `Bunuelos`, `HOT TODDY`, `The Hornitos Hot Shotty`, `LAST-MINUTE MULLED WINE`, `HEATED AFFAIR`, `Guinness Of Ireland`, `Pina Colada`, `GIN of ENGLAND`, `Campari`) VALUES 
+  }
+
+  }
+
+
+  $sql="INSERT INTO `orderSummary` ( `userid`, `noOfMembers`, `timeOfComming`, `Hors d'oeuvres`, `Amuse-bouche`, `Bouillabaisse`, `Feijoada`, `Leche Asada`, `Lemon Meringue Pie`, `Brigadeiros`, `Bunuelos`, `HOT TODDY`, `The Hornitos Hot Shotty`, `LAST-MINUTE MULLED WINE`, `HEATED AFFAIR`, `Guinness Of Ireland`, `Pina Colada`, `GIN of ENGLAND`, `Campari`) VALUES
    ($userid ,$noOfMembers,'$time',$ordersummary[1],$ordersummary[2],$ordersummary[3],$ordersummary[4],$ordersummary[5],$ordersummary[6],$ordersummary[7],$ordersummary[8],$ordersummary[9],$ordersummary[10],$ordersummary[11],$ordersummary[12],$ordersummary[13],$ordersummary[14],$ordersummary[15],$ordersummary[16])";
   if ($conn->query($sql) === TRUE) {
     echo "Your data is saved succesfully.";

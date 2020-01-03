@@ -7,8 +7,8 @@ b, u, i, center,
 dl, dt, dd, ol, ul, li,
 fieldset, form, label, legend,
 table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
 	margin: 0;
@@ -17,10 +17,10 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
     vertical-align: baseline;
-    
+
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
+article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
@@ -47,7 +47,7 @@ table {
           box-sizing: border-box; }
 body{
     transition: 0.5s;
-    background: url(mainpageimages/restaurant.jpg) no-repeat fixed; 
+    background: url(mainpageimages/restaurant.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -56,12 +56,12 @@ body{
     color: white;
     text-decoration-style: none;
     list-style: none;
-    
-  
+
+
   }
   body.hover-eat {
     transition: 0.5s;
-    background: url(mainpageimages/eat.jpg) no-repeat fixed; 
+    background: url(mainpageimages/eat.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -70,41 +70,41 @@ body{
     color: white;
     list-style: none;
     text-decoration-style: none;
-    
+
   }
-  
+
   body.hover-drink {
     transition: 0.5s;
-    background: url(mainpageimages/drink.jpg) no-repeat fixed; 
+    background: url(mainpageimages/drink.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Libre Caslon Text', serif;
     color: white;
-    
+
   }
-  
+
   body.hover-visit {
     transition: 0.5s;
-    background: url(mainpageimages/visit.jpg) no-repeat fixed; 
+    background: url(mainpageimages/visit.jpg) no-repeat fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     font-family: 'Libre Caslon Text', serif;
     color: white;
-    
+
   }
   a{
     padding-right: 7px;
   }
-  
+
   i{
     font-size: 17px;
     padding: 3px;
   }
-  
+
   h1{
     padding: 10px;
     margin: 5px;
@@ -116,7 +116,7 @@ body{
     padding-bottom: 15px;
     font-style: italic;
   }
-  
+
   p{
     padding: 17px;
     margin-top: 13px;
@@ -124,9 +124,9 @@ body{
     font-size: 14px;
     line-height: 24px;
   }
-  
-  
-  
+
+
+
   hr.thin {
     height: 1px;
     border: 0;
@@ -134,10 +134,10 @@ body{
     background-color: #333;
     width: 100%;
     margin-bottom: 60px;
-    } 
-  
-  
-  
+    }
+
+
+
   .mid-nav{
     margin:15px;
     font-size: 60px;
@@ -147,7 +147,7 @@ body{
     text-decoration: none;
     color:white;
   }
-  
+
   .mainbody{
     top: 50%; /* IMPORTANT */
     left: 50%; /* IMPORTANT */
@@ -159,7 +159,7 @@ body{
     margin-top: -124.5px; /* HALF OF THE HEIGHT */
     margin-left: -375px; /* HALF OF THE WIDTH */
   }
-  
+
   .adress{
     font-style: italic;
     color: rgb(255, 255, 255);
@@ -168,35 +168,36 @@ body{
     padding-bottom: 25px;
     text-align: center;
   }
-  
+
   .left{
     float: left;
     padding-left: 25px;
     font-size: 26px;
   }
-  
+
   .right{
     float: right;
     padding-right: 32px;
     font-size : 13px;
     text-decoration: none;
     color:white;
+		display: -webkit-inline-box;
   }
-  
+
   .social-nav:hover{
     cursor:pointer;
-    
+
   }
   .fa-twitter{
     margin-left: 15px;
-  
+
   }
-  
+
   .header{
     padding-top:25px;
-  
+
   }
-  
+
   .right-nav{
     text-align:center;
     margin: 5px;
@@ -206,11 +207,11 @@ body{
   .right-nav:hover{
     cursor:pointer;
   }
-  
+
   .hover-color:hover{
     color: rgb(202, 120, 13);
   }
-  
+
   .title{
     cursor: pointer;
   }
@@ -219,15 +220,15 @@ body{
      text-decoration: none;
     list-style: none;
     text-decoration-style: none;
-    
+
   }
-  
+
   .social-hovered{
     opacity: 0.4;
     text-decoration: none;
     color:white;
   }
-  
+
   .dessert-img, .drink-img{
     height: 450px;
     width: auto;
@@ -235,7 +236,7 @@ body{
     padding-top: 50px;
     padding-bottom: 50px;
   }
-  
+
   .res-button, .eat-button{
     text-align:center;
     letter-spacing: 2.5px;
@@ -250,7 +251,7 @@ body{
     margin-top: 100px;
     cursor: pointer;
   }
-  
+
   .table-button{
     color: white;
     background-color:rgb(68, 66, 66);
@@ -267,14 +268,14 @@ body{
     margin-top: 50px;
     cursor: pointer;
   }
-  
+
   .title-footer{
     font-size: 40px;
     padding:15px;
     margin: 15px;
-  
+
   }
-  
+
   .social-div{
     margin-top: 15px;
     margin-bottom: 15px;
@@ -283,7 +284,7 @@ body{
     text-decoration: none;
     color:white;
   }
-  
+
   .contact-title, .location-title, .hours-title{
     font-style: italic;
     font-size: 14px;
@@ -291,16 +292,16 @@ body{
     padding: 10px;
     font-weight:bolder;
     color: black;
-  
+
   }
-  
+
   .contact, .location, .hours{
     padding: 40px;
     margin: 40px;
     color: rgba(0, 0, 0, 0.6);
     font-size: 13px;
     line-height:24px;
-    
+
   }
   #insta ,#facebook,#twitter{
     text-decoration: none;
@@ -318,6 +319,14 @@ body{
     font-size : 13px;
 }
 .logout:hover{
-    
+
     cursor:pointer;
   }
+
+	.social_link{
+	height: 20px;
+}
+img{
+	position: relative;
+	top: 4px;
+}

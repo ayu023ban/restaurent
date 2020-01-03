@@ -207,11 +207,11 @@ table {
         font-size: 14px;
         line-height: 24px;
       }
-      #logput,#insta ,#facebook,#twitter{
-        text-decoration: none;
-        color:black;
+      #instagram ,#facebook,#twitter{
+				height: 20px;
+			  width: auto;
       }
-    
+
 
 .form-control{
   width: 100%;
@@ -233,7 +233,7 @@ label{
   padding-bottom:  12px;
 }
 .logout{
-   
+
         text-decoration: none;
         color:black;
         border-width: 0;
@@ -244,8 +244,14 @@ label{
     font-size : 13px;
 }
 .logout:hover{
-    
+
     cursor:pointer;
   }
-
- 
+	.social_link{
+	height: 20px;
+	}
+	#img{
+	position: relative;
+	top: 10px;
+	width: auto;
+	}

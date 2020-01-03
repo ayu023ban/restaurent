@@ -195,6 +195,7 @@ p {
   float: right;
   padding-right: 32px;
   font-size: 13px;
+  display: -webkit-inline-box;
 
 }
 
@@ -229,6 +230,8 @@ p {
 
 .header {
   padding-top: 25px;
+  width:100%;
+  position: fixed;
 
 }
 
@@ -328,11 +331,11 @@ hr.thin {
   opacity: 0.4;
 }
 
-#insta,
+#instagram,
 #facebook,
 #twitter {
-  text-decoration: none;
-  color: black;
+  height: 20px;
+  width: auto;
 }
 
 .drink-button {
@@ -467,15 +470,15 @@ img {
   border-radius: 3px;
   border: #E0E0E0 1px solid;
 }
-input[type=number]::-webkit-inner-spin-button, 
-input[type=number]::-webkit-outer-spin-button { 
-      -webkit-appearance: none; 
-      margin: 0; 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      margin: 0;
 }
-input[type=number] { 
+input[type=number] {
   -moz-appearance: textfield;
   appearance: textfield;
-  margin: 0; 
+  margin: 0;
 }
 label{
   font-weight: bold;
@@ -498,4 +501,12 @@ margin-top: 8px;
   text-align: center;
   clear: both;
   margin: 38px 0px;
+}
+.social_link{
+height: 20px;
+}
+#img{
+position: relative;
+top: 10px;
+width: auto;
 }
