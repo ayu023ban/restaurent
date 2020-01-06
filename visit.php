@@ -41,7 +41,7 @@
             </div><img class="drink-img" src="orderpageimages/drink2.jpg">
           <div><a href="order.php"><div class="eat-button">VIEW FOOD MENU</div></a>
             <a href="drinks.php"><div class="drink-button">VIEW DRINKS MENU</div></a></div>
-            <hr class="thin"><a href="restest.html" class="title-footer"> —A Y U S H 'S— </a>
+            <hr class="thin"><a href="restest.php" class="title-footer"> —A Y U S H 'S— </a>
             <div class="social-div">
               <a href="https://twitter.com/ayushbansal023" ><img class="" id="twitter" src="mainpageimages/twitter-black.png"></a>
               <a href="https://www.facebook.com/ayushbansal23"><img class="" id="facebook" src="mainpageimages/fb-black.png"></a>
